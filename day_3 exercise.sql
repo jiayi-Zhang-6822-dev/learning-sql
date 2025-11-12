@@ -1,0 +1,15 @@
+INSERT INTO `day_3 exercise` VALUES (6);
+INSERT INTO `day_3 exercise` VALUES (1, 'd001');
+INSERT INTO `day_3 exercise` VALUES (1, 'd002');
+INSERT INTO `day_3 exercise` VALUES (1, 'd003');
+INSERT INTO `day_3 exercise` VALUES (1, 'd004');
+INSERT INTO `day_3 exercise` VALUES (2, 'd005');
+INSERT INTO `day_3 exercise` VALUES (75000.0000, 'd001');
+INSERT INTO `day_3 exercise` VALUES (90000.0000, 'd002');
+INSERT INTO `day_3 exercise` VALUES (50000.0000, 'd003');
+INSERT INTO `day_3 exercise` VALUES (60000.0000, 'd004');
+INSERT INTO `day_3 exercise` VALUES (73750.0000, 'd005');
+INSERT INTO `day_3 exercise` VALUES ('d001', 75000.0000);
+INSERT INTO `day_3 exercise` VALUES ('d002', 90000.0000);
+INSERT INTO `day_3 exercise` VALUES ('d005', 73750.0000);
+INSERT INTO `day_3 exercise` VALUES ('d005', 2, 73750.0000);
