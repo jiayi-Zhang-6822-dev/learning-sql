@@ -1,28 +1,34 @@
-INSERT INTO `day_2 exercise` VALUES (10003, '1978-3-3', 'Bob', 'Johnson', 'M', '2004-3-20', 'd001');
-INSERT INTO `day_2 exercise` VALUES (10001, '1980-1-1', 'John', 'Doe', 'M', '2005-6-1', 'd005');
-INSERT INTO `day_2 exercise` VALUES (10002, '1982-2-2', 'Jane', 'Smith', 'F', '2006-8-15', 'd005');
-INSERT INTO `day_2 exercise` VALUES (10005, '1985-5-5', 'Charlie', 'Wilson', 'M', '2007-5-30', 'd002');
-INSERT INTO `day_2 exercise` VALUES (10006, '1988-6-6', 'Diana', 'Lee', 'F', '2009-9-9', 'd004');
-INSERT INTO `day_2 exercise` VALUES (10004, '1990-4-4', 'Alice', 'Brown', 'F', '2010-11-11', 'd003');
-INSERT INTO `day_2 exercise` VALUES (10001, '1980-1-1', 'John', 'Doe', 'M', '2005-6-1', 'd005');
-INSERT INTO `day_2 exercise` VALUES (10002, '1982-2-2', 'Jane', 'Smith', 'F', '2006-8-15', 'd005');
-INSERT INTO `day_2 exercise` VALUES (10003, '1978-3-3', 'Bob', 'Johnson', 'M', '2004-3-20', 'd001');
-INSERT INTO `day_2 exercise` VALUES (10004, '1990-4-4', 'Alice', 'Brown', 'F', '2010-11-11', 'd003');
-INSERT INTO `day_2 exercise` VALUES (10005, '1985-5-5', 'Charlie', 'Wilson', 'M', '2007-5-30', 'd002');
-INSERT INTO `day_2 exercise` VALUES (10006, '1988-6-6', 'Diana', 'Lee', 'F', '2009-9-9', 'd004');
-INSERT INTO `day_2 exercise` VALUES (10003, '1978-3-3', 'Bob', 'Johnson', 'M', '2004-3-20', 'd001');
-INSERT INTO `day_2 exercise` VALUES (10005, '1985-5-5', 'Charlie', 'Wilson', 'M', '2007-5-30', 'd002');
-INSERT INTO `day_2 exercise` VALUES (10004, '1990-4-4', 'Alice', 'Brown', 'F', '2010-11-11', 'd003');
-INSERT INTO `day_2 exercise` VALUES (10006, '1988-6-6', 'Diana', 'Lee', 'F', '2009-9-9', 'd004');
-INSERT INTO `day_2 exercise` VALUES (10002, '1982-2-2', 'Jane', 'Smith', 'F', '2006-8-15', 'd005');
-INSERT INTO `day_2 exercise` VALUES (10001, '1980-1-1', 'John', 'Doe', 'M', '2005-6-1', 'd005');
-INSERT INTO `day_2 exercise` VALUES ('d001');
-INSERT INTO `day_2 exercise` VALUES ('d002');
-INSERT INTO `day_2 exercise` VALUES ('d003');
-INSERT INTO `day_2 exercise` VALUES ('d004');
-INSERT INTO `day_2 exercise` VALUES ('d005');
-INSERT INTO `day_2 exercise` VALUES ('d006');
-INSERT INTO `day_2 exercise` VALUES ('Engineer');
-INSERT INTO `day_2 exercise` VALUES ('Senior Engineer');
-INSERT INTO `day_2 exercise` VALUES ('Senior Staff');
-INSERT INTO `day_2 exercise` VALUES ('Staff');
+/*
+任务一：基础排序
+查询所有员工的信息（ employees  表），按照入职日期（ hire_date ）从早到晚（升序）排列。
+
+任务二：降序排序
+查询所有员工的信息，按照员工编号（ emp_no ）从大到小（降序）排列。
+
+任务三：多列排序（重要！）
+查询所有员工的信息，先按所在部门（ dept_no ）升序排列，同一个部门内再按入职日期（ hire_date ）降序排列。（这个任务能帮您清晰理解多列排序的优先级）
+
+任务四：去重查询
+查询公司中所有不重复的部门编号（ dept_no ）。（您应该得到一个包含所有部门编号的列表，且每个编号只出现一次）
+
+任务五：综合挑战
+查询  titles  表，列出所有不重复的职位名称（ title ），并将结果按职位名称的字母顺序（A-Z）升序排列。*/
+
+SELECT *
+FROM employees
+ORDER BY hire_date;
+
+SELECT *
+FROM employees
+ORDER BY emp_no;
+
+SELECT *
+FROM employees
+ORDER BY dept_no ,hire_date DESC;
+
+SELECT  DISTINCT dept_no
+FROM departments;
+
+SELECT DISTINCT title
+FROM titles
+ORDER BY title;
